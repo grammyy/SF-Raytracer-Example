@@ -8,13 +8,14 @@ if SERVER then
         src:linkComponent(chip())
     end
 else
-    local scale=5
+    local max=0.9
+    local scale=1
     local fov=120 --2
     local data={}
     local thread
     
     render.createRenderTarget("trace")
-    
+
     hook.add("render","",function()
         if !data.src then
             data.screen=render.getScreenEntity()
@@ -74,7 +75,7 @@ else
                             render.setColor(color)
                             render.drawRectFast(x*scale,y*scale,scale,scale)
                         
-                            if quotaAverage()>quotaMax()*0.9 then
+                            if quotaAverage()>0.006*max then
                                 coroutine.yield()
                             end
                         end
