@@ -9,13 +9,22 @@ if SERVER then
     end
 else
     local max=0.9
-    local scale=1
-    local fov=120 --2
+    local scale=4
+    local fov=160 --2
     local data={}
     local thread
+    version=1.7
+    
+    http.get("https://raw.githubusercontent.com/Elias-bff/SF-linker/main/linker.lua",function(data)
+        loadstring(data)()
+        
+        load({
+            "https://raw.githubusercontent.com/Elias-bff/SF-linker/main/builds/version%20changelog.lua"
+        })
+    end)
     
     render.createRenderTarget("trace")
-
+    
     hook.add("render","",function()
         if !data.src then
             data.screen=render.getScreenEntity()
@@ -83,7 +92,7 @@ else
                 end)
             end
 
-            if coroutine.status(thread)=="suspended" and quotaAverage()<quotaMax()*0.95 then
+            if coroutine.status(thread)=="suspended" and quotaAverage()<0.06*0.95 then
                 coroutine.resume(thread)
             end
             
