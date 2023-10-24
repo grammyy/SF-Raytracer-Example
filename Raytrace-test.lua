@@ -10,11 +10,11 @@ if SERVER then
 else
     local max=0.9
     local scale=4
-    local fov=160 --2
+    local fov=160
     local data={}
     local thread
-    version=1.1
-    repo="https://raw.githubusercontent.com/Elias-bff/SF-linker/main/builds/version"
+    version=1.7
+    repo="https://raw.githubusercontent.com/Elias-bff/SF-Raytracer-Example/main/version"
     
     http.get("https://raw.githubusercontent.com/Elias-bff/SF-linker/main/linker.lua",function(data)
         loadstring(data)()
