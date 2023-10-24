@@ -13,7 +13,7 @@ else
     local fov=160 --2
     local data={}
     local thread
-    version=1.7
+    version={1.1,"https://raw.githubusercontent.com/Elias-bff/SF-linker/main/builds/version"}
     
     http.get("https://raw.githubusercontent.com/Elias-bff/SF-linker/main/linker.lua",function(data)
         loadstring(data)()
