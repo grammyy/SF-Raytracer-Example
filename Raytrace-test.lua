@@ -20,7 +20,7 @@ else
         loadstring(data)()
         
         load({
-            "https://raw.githubusercontent.com/Elias-bff/SF-linker/main/builds/version%20changelog.lua"
+            "https://raw.githubusercontent.com/Elias-bff/SF-linker/main/public%20libs/version%20changelog.lua"
         })
     end)
     
