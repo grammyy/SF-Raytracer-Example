@@ -1,4 +1,4 @@
---@name Raytrace test
+--@name Raytrace example
 --@author Elias
 
 if SERVER then
