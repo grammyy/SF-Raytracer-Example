@@ -14,13 +14,13 @@ else
     local data={}
     local thread
     version=1.7
-    repo="https://raw.githubusercontent.com/Elias-bff/SF-Raytracer-Example/main/version"
+    repo="https://raw.githubusercontent.com/grammyy/SF-Raytracer-Example/main/version"
     
-    http.get("https://raw.githubusercontent.com/Elias-bff/SF-linker/main/linker.lua",function(data)
+    http.get("https://raw.githubusercontent.com/grammyy/SF-linker/main/linker.lua",function(data)
         loadstring(data)()
         
         load({
-            "https://raw.githubusercontent.com/Elias-bff/SF-linker/main/public%20libs/version%20changelog.lua"
+            "https://raw.githubusercontent.com/grammyy/SF-linker/main/public%20libs/version%20changelog.lua"
         })
     end)
     
